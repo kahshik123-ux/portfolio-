@@ -96,6 +96,7 @@ document.addEventListener('DOMContentLoaded', function () {
     var total = slides.length;
     var current = 0;
     var timer = null;
+    var isGalleryVisible = !('IntersectionObserver' in window);
 
     slides.forEach(function (slide) {
         var img = slide.getAttribute('data-img');
@@ -132,12 +133,39 @@ document.addEventListener('DOMContentLoaded', function () {
         render();
     }
 
-    function startTimer() { timer = setInterval(next, 2000); }
-    function restartTimer() { clearInterval(timer); startTimer(); }
+    function startTimer() {
+        if (!isGalleryVisible || timer) return;
+        timer = setInterval(next, 2000);
+    }
 
-    track.addEventListener('mouseenter', function () { clearInterval(timer); });
+    function restartTimer() {
+        clearInterval(timer);
+        timer = null;
+        startTimer();
+    }
+
+    track.addEventListener('mouseenter', function () {
+        clearInterval(timer);
+        timer = null;
+    });
     track.addEventListener('mouseleave', function () { startTimer(); });
 
     render();
     startTimer();
+
+    if ('IntersectionObserver' in window) {
+        var galleryObserver = new IntersectionObserver(function (entries) {
+            isGalleryVisible = entries[0].isIntersecting;
+            if (isGalleryVisible) {
+                current = 0;
+                render();
+                startTimer();
+            } else {
+                clearInterval(timer);
+                timer = null;
+            }
+        }, { threshold: 0.1 });
+
+        galleryObserver.observe(track);
+    }
 });

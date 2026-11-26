@@ -442,6 +442,14 @@ h3 {
 }
 .scroll-track.frames-4 img { width: 12.5%; }
 
+/* 8 unique photos + 8 duplicates = 16 frames */
+.scroll-track.frames-8 {
+    width: 1600%;
+    animation-name: scrollFrames4;
+    animation-duration: 24s;
+}
+.scroll-track.frames-8 img { width: 6.25%; }
+
 /* 3 unique photos + 3 duplicates = 6 frames */
 .scroll-track.frames-3 {
     width: 600%;
@@ -462,6 +470,9 @@ h3 {
     flex-shrink: 0;
     transition: none;
 }
+
+.scroll-track img[src$="taylor-university-02.jpeg"] { object-position: center 18%; }
+.scroll-track img[src$="taylor-university-04.jpeg"] { object-position: center 30%; }
 
 @keyframes scrollFrames4 {
     from { transform: translateX(0); }
@@ -544,7 +555,7 @@ h3 {
 
 /* ---------- Hackathons ---------- */
 
-.hack-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+.hack-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; align-items: start; }
 .hack-card {
     background: linear-gradient(160deg, #f0faf1, #ffffff);
     border: 1px solid #c9edcb;
@@ -639,6 +650,10 @@ h3 {
     display: block;
     transition: transform 0.5s ease;
 }
+
+.res-photo-card > img[src$="taylor-university-02.jpeg"] { object-position: center 18%; }
+.res-photo-card > img[src$="taylor-university-03.jpeg"] { object-position: center 18%; }
+.res-photo-card > img[src$="taylor-university-04.jpeg"] { object-position: center 30%; }
 
 /* 3-photo automatic slider */
 .res-photo-card .photo-slider {
@@ -881,25 +896,25 @@ footer {
 .coverflow-slide[data-pos="-1"] {
     transform: translate(-105%, -50%) scale(0.82);
     z-index: 4;
-    filter: grayscale(85%) blur(1px);
+    filter: blur(1px);
     opacity: 0.75;
 }
 .coverflow-slide[data-pos="1"] {
     transform: translate(5%, -50%) scale(0.82);
     z-index: 4;
-    filter: grayscale(85%) blur(1px);
+    filter: blur(1px);
     opacity: 0.75;
 }
 .coverflow-slide[data-pos="-2"] {
     transform: translate(-160%, -50%) scale(0.65);
     z-index: 3;
-    filter: grayscale(95%) blur(2px);
+    filter: blur(2px);
     opacity: 0.45;
 }
 .coverflow-slide[data-pos="2"] {
     transform: translate(60%, -50%) scale(0.65);
     z-index: 3;
-    filter: grayscale(95%) blur(2px);
+    filter: blur(2px);
     opacity: 0.45;
 }
 .coverflow-slide[data-pos="hidden"] {
