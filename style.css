@@ -406,6 +406,14 @@ h3 {
     transition: transform 0.5s ease;
 }
 
+.nptel-card-two img.nptel-certificate-full {
+    object-fit: contain;
+    object-position: center;
+    background: #fff;
+}
+
+.nptel-card-two:hover img.nptel-certificate-full { transform: none; }
+
 .nptel-card-two:hover img { transform: scale(1.06); }
 
 /* Reusable auto-scrolling photo filmstrip — used by cards with multiple photos
@@ -442,6 +450,14 @@ h3 {
 }
 .scroll-track.frames-4 img { width: 12.5%; }
 
+/* 5 unique photos + 5 duplicates = 10 frames */
+.scroll-track.frames-5 {
+    width: 1000%;
+    animation-name: scrollFrames4;
+    animation-duration: 20s;
+}
+.scroll-track.frames-5 img { width: 10%; }
+
 /* 8 unique photos + 8 duplicates = 16 frames */
 .scroll-track.frames-8 {
     width: 1600%;
@@ -469,6 +485,11 @@ h3 {
     object-fit: cover;
     flex-shrink: 0;
     transition: none;
+}
+
+.scroll-track.nptel-presentation-track img {
+    object-fit: contain;
+    background: #fff;
 }
 
 .scroll-track img[src$="taylor-university-02.jpeg"] { object-position: center 18%; }
@@ -749,6 +770,8 @@ h3 {
 .small-box:hover { transform: translateY(-2px); box-shadow: var(--shadow-soft); }
 .small-box h4 { margin: 0 0 5px 0; font-size: 0.86rem; font-family: 'Poppins', sans-serif; font-weight: 600; color: var(--text-dark); }
 .small-box p { margin: 0; color: var(--text-gray); }
+.research-profile-link { color: var(--forest); font-weight: 600; text-decoration: none; overflow-wrap: anywhere; }
+.research-profile-link:hover { color: var(--emerald); text-decoration: underline; }
 
 .mt-3 { margin-top: 12px; }
 .mt-2 { margin-top: 6px; }

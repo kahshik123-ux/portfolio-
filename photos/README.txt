@@ -21,20 +21,15 @@ NPTEL COURSE CERTIFICATES
   N3.jpg
   N2.jpg
 
-NPTEL STAR
-==========
-  nptel-star-programming.jpg
-  nptel-star-faculty-fundamental.jpg
-  nptel-star-discipline-stars.jpg
-  nptel-star-believers-01.jpg
-  nptel-star-believers-02.jpg
-  nptel-star-believers-03.jpg
-  nptel-star-believers-04.jpg
-  nptel-star-motivated-learner.jpg
-  nptel-star-interaction-01.jpg
-  nptel-star-interaction-02.jpg
-  nptel-star-interaction-03.jpg
-  nptel-star-interaction-04.jpg
+CERTIFICATIONS PORTFOLIO
+========================
+  nptel-star-believer-latest.jpeg
+  nptel-star-motivated-learner-latest.jpeg
+  nptel-star-discipline-star-latest.jpeg
+  nptel-active-spoc-certificate.png
+  nptel-active-spoc-presentation-01.png
+  nptel-active-spoc-presentation-02.png
+  nptel-active-spoc-presentation-03.png
 
 SMART INDIA HACKATHON 2025
 ==========================
